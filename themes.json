@@ -1,0 +1,14 @@
+[
+  { "id": "biryani-bonanza", "name": "Biryani Bonanza", "description": "Biryani across regions—Malabar, Thalassery, Hyderabadi, Kolkata, Lucknowi.", "keralaTouch": "Thalassery biryani, sulaimani tea.", "fun": "Blind aroma test: guess the spice mix." },
+  { "id": "seafood-fiesta", "name": "Seafood Fiesta", "description": "Fish, prawns, crab, mussels. Coastal classics and experiments.", "keralaTouch": "Meen pollichathu, chemmeen roast, karimeen fry.", "fun": "Fish auction game with fake rupees." },
+  { "id": "breakfast-for-dinner", "name": "Breakfast For Dinner", "description": "Appam, puttu, dosa, idiyappam at night. Sweet and savory.", "keralaTouch": "Egg roast, stew, kadala curry.", "fun": "Dosa flip contest (safely!), or appam art challenge." },
+  { "id": "bbq-backyard", "name": "BBQ & Backyard Grill", "description": "Smoky grills, kebabs, paneer tikka, grilled pineapple.", "keralaTouch": "Pepper chicken tikka, coconut-chili marinades.", "fun": "Sauce taste-off: who blends the best chutney?" },
+  { "id": "onam-sadhya", "name": "Onam Sadhya", "description": "Traditional grand vegetarian feast on banana leaves.", "keralaTouch": "Avial, olan, sambar, payasam.", "fun": "Pookalam mini challenge." },
+  { "id": "street-food-night", "name": "Street Food Night", "description": "Chaat, kathi rolls, momos, shawarma, porotta.", "keralaTouch": "Beef fry & porotta, mutta roast.", "fun": "Build-your-own chaat station speed run." },
+  { "id": "spice-route", "name": "Spice Route", "description": "Dishes highlighting one star spice per person.", "keralaTouch": "Black pepper, cardamom, clove, cinnamon.", "fun": "Spice trivia lightning round." },
+  { "id": "tiffin-tales", "name": "Tiffin Tales", "description": "Lunchbox nostalgia—simple homestyle comfort food.", "keralaTouch": "Thoran, moru curry, fish curry.", "fun": "Childhood food story circle (short, 1 minute each)." },
+  { "id": "veg-delight", "name": "Vegetarian Delight", "description": "All-veg creativity—regional classics and modern twists.", "keralaTouch": "Jackfruit cutlet, beet thoran.", "fun": "Mystery basket: 3 ingredients, 10-minute snack." },
+  { "id": "sweet-symphony", "name": "Sweet Symphony", "description": "Desserts night—payasam, halwa, puddings, ice cream.", "keralaTouch": "Ada pradhaman, banana halwa.", "fun": "Payasam tasting flight and rank." },
+  { "id": "ramzan-flavors", "name": "Ramzan Flavors", "description": "Iftar specialties and festive dishes.", "keralaTouch": "Nombu kanji, pathiri, chicken fry.", "fun": "Dates tasting—guess origin." },
+  { "id": "christmas-feast", "name": "Christmas Feast", "description": "Roasts, bakes, cutlets, plum cake.", "keralaTouch": "Pork roast, kallappam.", "fun": "Secret Santa spice exchange." }
+]
