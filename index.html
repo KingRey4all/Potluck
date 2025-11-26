@@ -20,37 +20,24 @@
 
     /* Responsive iframe embeds */
     .embed iframe {
-      width: 100%;          /* scales to parent width */
-      max-width: 100%;      /* prevents overflow */
+      width: 100%;
+      max-width: 100%;
       border: none;
       border-radius: 4px;
     }
 
     /* Default heights */
-    #dish-form-embed iframe {
-      height: 705px;
-    }
-    #feedback-form-embed iframe {
-      height: 1040px;
-    }
+    #dish-form-embed iframe { height: 705px; }
+    #feedback-form-embed iframe { height: 1040px; }
 
     /* Adjust heights for smaller screens */
     @media (max-width: 768px) {
-      #dish-form-embed iframe {
-        height: 600px;
-      }
-      #feedback-form-embed iframe {
-        height: 800px;
-      }
+      #dish-form-embed iframe { height: 600px; }
+      #feedback-form-embed iframe { height: 800px; }
     }
-
     @media (max-width: 480px) {
-      #dish-form-embed iframe {
-        height: 500px;
-      }
-      #feedback-form-embed iframe {
-        height: 600px;
-      }
+      #dish-form-embed iframe { height: 500px; }
+      #feedback-form-embed iframe { height: 600px; }
     }
   </style>
 </head>
@@ -87,21 +74,15 @@
         <div class="panel">
           <h3>Dish sign-up</h3>
           <div id="dish-form-embed" class="embed">
-            <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLScc47bhObJHrQ1LXIkNEVpYMZ-s3koHJuErnRa0aXfUssCQRA/viewform?embedded=true">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScc47bhObJHrQ1LXIkNEVpYMZ-s3koHJuErnRa0aXfUssCQRA/viewform?embedded=true">
               Loading…
             </iframe>
-            <p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScc47bhObJHrQ1LXIkNEVpYMZ-s3koHJuErnRa0aXfUssCQRA/viewform?usp=dialog" target="_blank">
-                Open in new tab
-              </a>
-            </p>
+            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScc47bhObJHrQ1LXIkNEVpYMZ-s3koHJuErnRa0aXfUssCQRA/viewform?usp=dialog" target="_blank">Open in new tab</a></p>
           </div>
         </div>
         <div id="signup-table" class="panel">
           <h3>Current sign-ups</h3>
           <div id="signups" class="responsive-table">
-            <!-- If using Airtable or Google Sheets, embed view here -->
             <p>View here for live updates.</p>
           </div>
         </div>
@@ -116,15 +97,10 @@
         <div class="panel">
           <h3>Feedback form</h3>
           <div id="feedback-form-embed" class="embed">
-            <iframe 
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdBYevOU7NM8HH0SwcyIAEyk70XIfYpwX0ouZ18DD-ADeb41Q/viewform?embedded=true">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdBYevOU7NM8HH0SwcyIAEyk70XIfYpwX0ouZ18DD-ADeb41Q/viewform?embedded=true">
               Loading…
             </iframe>
-            <p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdBYevOU7NM8HH0SwcyIAEyk70XIfYpwX0ouZ18DD-ADeb41Q/viewform?usp=dialog" target="_blank">
-                Open in new tab
-              </a>
-            </p>
+            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdBYevOU7NM8HH0SwcyIAEyk70XIfYpwX0ouZ18DD-ADeb41Q/viewform?usp=dialog" target="_blank">Open in new tab</a></p>
           </div>
         </div>
         <div class="panel">
