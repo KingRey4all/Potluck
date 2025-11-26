@@ -13,7 +13,7 @@
       --bg: #faf8f4;
       --text: #1f2937;
       --muted: #6b7280;
-      --card: #ffffff;
+      --card: var(--bg); /* FIX: match background */
       --accent: #ef4444;
     }
 
@@ -61,7 +61,11 @@
       gap: 1rem; 
     }
     .cards li, .panel, .card {
-      background: var(--card); border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,.05);
+      background: var(--card); 
+      border: 1px solid #e5e7eb; 
+      border-radius: 12px; 
+      padding: 1rem; 
+      box-shadow: 0 2px 6px rgba(0,0,0,.05);
     }
     .card h4 { margin: 0 0 .25rem 0; }
     .card .muted { color: var(--muted); font-size: .9rem; }
@@ -161,10 +165,4 @@
     <section id="fun">
       <h2>Theme-based fun events</h2>
       <p class="subtitle">Each event includes a short activity to keep it playful and memorable.</p>
-      <ul id="fun-ideas" class="cards"></ul>
-    </section>
-
-    <!-- About -->
-    <section id="about">
-      <h2>About the club</h2>
-      <p>We’re friends from Kerala, living across the US, keeping our food, stories, and laughter alive through themed pot
+      <ul id="fun-ideas" class="
