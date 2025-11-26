@@ -43,10 +43,23 @@
     h3 { margin-top: 1rem; font-size: 1.2rem; }
     .subtitle { color: var(--muted); margin-top: .25rem; }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    /* FIXED layout: always two columns */
+    .grid { 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 1rem; 
+    }
+    .grid-2 { 
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 1rem; 
+    }
 
-    .cards { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+    .cards { 
+      list-style: none; padding: 0; margin: 0; 
+      display: grid; grid-template-columns: repeat(2, 1fr); 
+      gap: 1rem; 
+    }
     .cards li, .panel, .card {
       background: var(--card); border: 1px solid #e5e7eb; border-radius: 12px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,.05);
     }
@@ -102,4 +115,56 @@
     <!-- Signup -->
     <section id="signup">
       <h2>Dish and hosting sign-up</h2>
-      <p class="subtitle">Pick your dish and volunteer to host
+      <p class="subtitle">Pick your dish and volunteer to host. Please note any dietary needs or allergies.</p>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Dish sign-up</h3>
+          <div id="dish-form-embed" class="embed">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScc47bhObJHrQ1LXIkNEVpYMZ-s3koHJuErnRa0aXfUssCQRA/viewform?embedded=true">
+              Loading…
+            </iframe>
+            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScc47bhObJHrQ1LXIkNEVpYMZ-s3koHJuErnRa0aXfUssCQRA/viewform?usp=dialog" target="_blank">Open in new tab</a></p>
+          </div>
+        </div>
+        <div id="signup-table" class="panel">
+          <h3>Current sign-ups</h3>
+          <div id="signups" class="responsive-table">
+            <p>View here for live updates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback -->
+    <section id="feedback">
+      <h2>After-event feedback and best dish vote</h2>
+      <p class="subtitle">Tell us what worked and vote for the best dish. Winners earn bragging rights!</p>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Feedback form</h3>
+          <div id="feedback-form-embed" class="embed">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdBYevOU7NM8HH0SwcyIAEyk70XIfYpwX0ouZ18DD-ADeb41Q/viewform?embedded=true">
+              Loading…
+            </iframe>
+            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdBYevOU7NM8HH0SwcyIAEyk70XIfYpwX0ouZ18DD-ADeb41Q/viewform?usp=dialog" target="_blank">Open in new tab</a></p>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Winners and highlights</h3>
+          <p>Post-event, we’ll share photos, highlights, and announce the best dish here.</p>
+          <div id="highlights" class="cards"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fun -->
+    <section id="fun">
+      <h2>Theme-based fun events</h2>
+      <p class="subtitle">Each event includes a short activity to keep it playful and memorable.</p>
+      <ul id="fun-ideas" class="cards"></ul>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About the club</h2>
+      <p>We’re friends from Kerala, living across the US, keeping our food, stories, and laughter alive through themed pot
