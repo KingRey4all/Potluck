@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dish n Chill</title>
+  <link rel="stylesheet" href="styles.css" />
   <meta name="description" content="Dish n Chill: rotating themed potlucks across friends’ homes in the US. Vote, sign up, and share feedback." />
   <style>
     /* Panel styling */
@@ -164,29 +165,6 @@
     </div>
   </footer>
 
-  <script>
-    // Schedule data with clean dates only, hosts marked as "open"
-    const events = [
-      { date: "January 11, 2025", theme: "New Year Feast", host: "open" },
-      { date: "March 8, 2025", theme: "Spring Feast", host: "open" },
-      { date: "May 10, 2025", theme: "BBQ Bash", host: "open" },
-      { date: "July 12, 2025", theme: "Summer Coolers", host: "open" },
-      { date: "September 13, 2025", theme: "Harvest Dinner", host: "open" },
-      { date: "November 8, 2025", theme: "Festival of Flavors", host: "open" }
-    ];
-
-    const scheduleList = document.getElementById("schedule-list");
-
-    events.forEach(event => {
-      const div = document.createElement("div");
-      div.className = "panel";
-      div.innerHTML = `
-        <h3>${event.date}</h3>
-        <p><strong>Theme:</strong> ${event.theme}</p>
-        <p><strong>Host:</strong> ${event.host}</p>
-      `;
-      scheduleList.appendChild(div);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
