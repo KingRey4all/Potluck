@@ -13,7 +13,7 @@
       --bg: #faf8f4;
       --text: #1f2937;
       --muted: #6b7280;
-      --card: var(--bg); /* FIX: match background */
+      --card: #fff; /* FIXED: Use white for cards to distinguish from background */
       --accent: #ef4444;
     }
 
@@ -43,29 +43,22 @@
     h3 { margin-top: 1rem; font-size: 1.2rem; }
     .subtitle { color: var(--muted); margin-top: .25rem; }
 
-    /* FIXED layout: always two columns */
-    .grid { 
+    /* Layout for two columns, stacking on small screens */
+    .grid, .grid-2, .cards {
       display: grid; 
-      grid-template-columns: repeat(2, 1fr); 
-      gap: 1rem; 
-    }
-    .grid-2 { 
-      display: grid; 
-      grid-template-columns: repeat(2, 1fr); 
-      gap: 1rem; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Auto-fit columns, minimum 300px width */
+      gap: 1.5rem; /* Increased gap for better spacing */
     }
 
     .cards { 
       list-style: none; padding: 0; margin: 0; 
-      display: grid; grid-template-columns: repeat(2, 1fr); 
-      gap: 1rem; 
     }
     .cards li, .panel, .card {
       background: var(--card); 
       border: 1px solid #e5e7eb; 
       border-radius: 12px; 
-      padding: 1rem; 
-      box-shadow: 0 2px 6px rgba(0,0,0,.05);
+      padding: 1.25rem; /* Increased padding */
+      box-shadow: 0 4px 12px rgba(0,0,0,.08); /* Stronger shadow for depth */
     }
     .card h4 { margin: 0 0 .25rem 0; }
     .card .muted { color: var(--muted); font-size: .9rem; }
@@ -79,14 +72,35 @@
     button:hover { filter: brightness(1.05); }
 
     .responsive-table { overflow-x: auto; }
-    .embed { background: #fff; border: 1px dashed #d1d5db; border-radius: 10px; padding: .75rem; color: var(--muted); }
+    .embed iframe {
+        width: 100%;
+        height: 400px; /* Standardized height for iframes */
+        border: none;
+        border-radius: 8px;
+    }
+    .embed { 
+        background: #fff; 
+        border: 1px dashed #d1d5db; 
+        border-radius: 10px; 
+        padding: .75rem; 
+        color: var(--muted); 
+    }
+    .embed p { margin: .5rem 0 0; text-align: center; }
 
     .note { color: var(--muted); font-size: .9rem; margin-top: .5rem; }
     .status { margin-top: .5rem; color: var(--green); font-weight: 600; }
 
-    .site-footer { margin-top: 2rem; padding: 1rem 0; background: #f3f4f6; color: #374151; text-align: center; }
+    .site-footer { margin-top: 4rem; padding: 2rem 0; background: #f3f4f6; color: #374151; text-align: center; }
 
-    .details summary { cursor: pointer; font-weight: 600; }
+    .details summary { cursor: pointer; font-weight: 600; padding: .5rem 0; }
+    .details .panel { margin-top: .5rem; }
+
+    /* Added simple media query for very small screens if minmax isn't enough */
+    @media (max-width: 400px) {
+        .grid, .grid-2, .cards {
+            grid-template-columns: 1fr;
+        }
+    }
   </style>
 </head>
 <body>
@@ -124,10 +138,10 @@
         <div class="panel">
           <h3>Dish sign-up</h3>
           <div id="dish-form-embed" class="embed">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScc47bhObJHrQ1LXIkNEVpYMZ-s3koHJuErnRa0aXfUssCQRA/viewform?embedded=true">
+            <iframe src="docs.google.com">
               Loading…
             </iframe>
-            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLScc47bhObJHrQ1LXIkNEVpYMZ-s3koHJuErnRa0aXfUssCQRA/viewform?usp=dialog" target="_blank">Open in new tab</a></p>
+            <p><a href="docs.google.com" target="_blank">Open in new tab</a></p>
           </div>
         </div>
         <div id="signup-table" class="panel">
@@ -147,10 +161,10 @@
         <div class="panel">
           <h3>Feedback form</h3>
           <div id="feedback-form-embed" class="embed">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdBYevOU7NM8HH0SwcyIAEyk70XIfYpwX0ouZ18DD-ADeb41Q/viewform?embedded=true">
+            <iframe src="docs.google.com">
               Loading…
             </iframe>
-            <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdBYevOU7NM8HH0SwcyIAEyk70XIfYpwX0ouZ18DD-ADeb41Q/viewform?usp=dialog" target="_blank">Open in new tab</a></p>
+            <p><a href="docs.google.com" target="_blank">Open in new tab</a></p>
           </div>
         </div>
         <div class="panel">
@@ -165,4 +179,51 @@
     <section id="fun">
       <h2>Theme-based fun events</h2>
       <p class="subtitle">Each event includes a short activity to keep it playful and memorable.</p>
-      <ul id="fun-ideas" class="
+      <ul id="fun-ideas" class="cards">
+        <li class="card">
+          <h4>"Taco Tuesday" Trivia</h4>
+          <p class="muted">Test your knowledge of Mexican culture and food facts.</p>
+        </li>
+        <li class="card">
+          <h4>"Italian Night" Gelato Making</h4>
+          <p class="muted">Hands-on session to create a custom sweet treat.</p>
+        </li>
+        <li class="card">
+          <h4>"Southern Comfort" Charades</h4>
+          <p class="muted">Act out famous Southern movies, songs, or phrases.</p>
+        </li>
+        <li class="card">
+          <h4>"Asian Fusion" Chopstick Challenge</h4>
+          <p class="muted">Race to pick up tricky items with chopsticks.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Dish n Chill</h2>
+      <p>
+        We're a group of friends in the US who love good food and good company. Our potlucks are designed to explore diverse cuisines and build community through shared experiences. We rely on your feedback and participation to keep this fun and engaging.
+      </p>
+      <details class="details">
+        <summary>Contact Info & Rules</summary>
+        <div class="panel">
+          <p><strong>Organizer:</strong> Alex (reach out via group chat)</p>
+          <p><strong>Rules:</strong></p>
+          <ul>
+            <li>Please respect all dietary restrictions noted in the sign-up sheet.</li>
+            <li>Bring enough food to serve at least 6 people.</li>
+            <li>Clean up after yourself.</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2025 Dish n Chill. Handcrafted with ❤️ and a full stomach.</p>
+    </div>
+  </footer>
+</body>
+</html>
